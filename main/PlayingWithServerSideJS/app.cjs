@@ -10,7 +10,7 @@ app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
 
-//This code will start a node.js app listening on port 3000. 
+//This code will start a node.js app listening on port 3000. It is dependent on the Express node.js package
 //It will display Hello World in the browser at url http://localhost:3000/
 //Run node main\PlayingWithServerSideJS\app.cjs in the terminal to start the app, then navigate to the url to see the output.
 //Use netstat -ano | findstr :3000 and tskill typeyourPIDhere to kill the app
