@@ -1,0 +1,17 @@
+<html>
+<body>
+    <div id="upper-div">
+        <button id="button-1">Go to eventPropogation.html</button>
+    </div>
+</body>
+<script>
+    const elements = [];
+    document.getElementById('button-1').addEventListener('click',navigate);
+    document.getElementById('button-2').addEventListener('click',back);
+
+    function navigate(e){
+        console.log('Navigating away...');
+        window.location.href = "http://127.0.0.1:3000/main/PlayingWithHTML/eventPropogation.html";
+    };
+</script>
+</html>

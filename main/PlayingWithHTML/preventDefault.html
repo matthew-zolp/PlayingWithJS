@@ -1,0 +1,13 @@
+<html>
+<form action="/process-hours.php">
+     <label for="hours">Project Hours:</label><br>
+     <input type="text" id="hours" name="hours">
+     <input type="submit" value="Submit" id="submit-hours">
+</form>
+<script>
+document.getElementById('submit-hours').addEventListener('click', function(event) {
+  let hours = document.getElementById('hours').value;
+  if(!hours) {event.preventDefault()};
+});
+</script>
+</html>

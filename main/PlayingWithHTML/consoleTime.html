@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <div>
+            <button id="sim">Simulate Data Fetch</button>
+        </div>
+    </body>
+    <script>
+        document.getElementById("sim").addEventListener("click", handleGetData);
+
+        async function handleGetData(event) {
+            console.log('Simulating Data Fetch...');
+            let records = [];
+            console.time('label');
+            for (var i = 0; i < 20000000; i++) {
+                let record = 'FirstName' + i + ' ' + 'LastName' + i;
+                records.push(record);
+            }
+            console.timeLog('label');
+            console.table(records);
+        }
+    </script>
+</html>

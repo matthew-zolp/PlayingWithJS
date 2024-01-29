@@ -1,0 +1,22 @@
+<html>
+    <div id="title">This is the Title div</div>
+    <input type="text" id="addtext" name="Add Text">
+    <button id="button-1">Add Text</button>
+    <script>
+        let titleElement;
+        window.onLoad = function() {
+            console.log('init');
+            titleElement = document.getElementById("title");
+        }
+        document.getElementById('button-1').addEventListener('click',handleClick);
+
+        function handleClick(){
+            let newElementDiv = document.createElement("div");
+            let text= document.getElementById('addtext').value;
+            let textChild = document.createTextNode(text);
+            newElementDiv.appendChild(textChild);
+            document.body.insertBefore(newElementDiv, titleElement.nextSibling);
+            document.getElementById('addtext').value = '';
+        };
+    </script>
+</html>

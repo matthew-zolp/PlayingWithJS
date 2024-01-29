@@ -1,0 +1,27 @@
+<html>
+<div id="crust">
+    <div id="mantle">
+        <div id="core">
+            <button>Click</button>
+        </div>
+    </div> 
+</div>
+
+<script>
+document.getElementById("crust")
+    .addEventListener("click", function(){ console.log('crust'); }, { capture: false});
+
+document.getElementById("mantle")
+    .addEventListener("click", function(){ console.log('mantle'); }, { once: true });
+
+document.getElementById("core")
+    .addEventListener("click", function(){ console.log('core'); }, { capture: true, once: true });
+</script>
+</html>
+
+<!-- This code outputs core, mantle, crust, crust after clicking the button twice. 
+This is because when capture is set to false or unspecified on the event listener, the listener will fire its callback function
+during the bubbling phase, which occurs after the capturing phase. If capture is not specified, the event will "bubble" by default.
+Event propagation begins with the target element, then steps up through the parent elements.
+
+Also, if the once property is set to true, it causes the event listener to be removed from the element after one event invocation-->

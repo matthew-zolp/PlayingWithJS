@@ -1,0 +1,27 @@
+<html>
+<body>
+  <canvas id="myCanvas" width="600" height="600"></canvas>
+  <script>
+    const circles = [{radius: 40, color: 'red'},
+    {radius: 150, color: 'purple'},
+    {radius: 140, color: 'yellow'},
+    {radius: 130, color: 'cyan'},
+    {radius: 110, color: 'orange'},
+    {radius: 100, color: 'violet'},
+    {radius: 90, color: 'red'},
+    {radius: 80, color: 'green'},
+    {radius: 70, color: 'indigo'},
+    {radius: 60, color: 'brown'},
+    {radius: 50, color: 'pink'}];                                                             
+    const canvas = document.getElementById('myCanvas'); 
+    let ctx = canvas.getContext('2d');                  
+    for (let circle in circles) {
+      ctx.beginPath();
+      ctx.fillStyle = circles[circle].color;          
+      ctx.arc(150, 150, circles[circle].radius, 0, 2*Math.PI); 
+      ctx.fill();
+      ctx.closePath();
+    }
+  </script>
+</body>
+</html>

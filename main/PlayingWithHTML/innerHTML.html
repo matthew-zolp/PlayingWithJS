@@ -1,0 +1,24 @@
+<!-- The web page has the following HTML: -->
+<html>
+<div class="container">
+    <h1>Cube Your Number</h1>
+</div>
+<div class="container">
+    <div class="input">
+        <label for=”num”>Input: </label>
+        <input id="num" type="number" onkeyup="numberInput()" />
+    </div>
+    <div id="out" class="output">
+        <label for=”output-num”>Output: </label>
+        <label id="output-num"></label>
+    </div>
+</div>
+<script>
+ function numberInput() {
+  let outputDiv = document.getElementById("output-num");
+   let numInput = document.getElementById("num").value;
+  let cube = numInput * numInput * numInput;
+   outputDiv.innerHTML = cube;
+    }
+</script>
+</html>

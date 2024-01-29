@@ -1,0 +1,25 @@
+<html>
+<body>
+    <div id="upper-div">
+        <button id="button-1">Button 1</button>
+        <button id="button-2">Button 2</button>
+        <button id="button-3">Button 3</button>
+        <button id="button-done">Done</button>
+    </div>
+</body>
+<script>
+    const elements = [];
+    document.getElementById('button-1').addEventListener('click',logClick);
+    document.getElementById('button-2').addEventListener('click',logClick);
+    document.getElementById('button-3').addEventListener('click',logClick);
+    function logClick(e){
+        console.log(`Adding ${e.target.innerText} to elements array`);
+        elements.push(e.target.innerText);
+    }
+    document.getElementById('button-done').addEventListener('click',function(e) {
+        console.log('Done button clicked');
+        console.log(JSON.stringify(elements));
+        event.stopPropagation();
+    });
+</script>
+</html>

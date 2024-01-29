@@ -1,0 +1,1 @@
+This is some example text. Maybe this is an output file that contains a package.xml or perhaps a secret for authentication.

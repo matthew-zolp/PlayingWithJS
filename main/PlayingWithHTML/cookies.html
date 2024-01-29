@@ -1,0 +1,15 @@
+<html>
+    <body>
+        <div>Cookies are delicious!</div>
+        <button id="cookieButton">Get Cookie now!</button>
+
+    </body>
+    <script>
+        window.onLoad = function() {
+            document.cookie = 'Here is a delicious sugar cookie.';
+        }
+        document.getElementById('cookieButton').addEventListener('click', function () {
+            window.alert(JSON.stringify(document.cookie))
+        });
+    </script>
+</html>

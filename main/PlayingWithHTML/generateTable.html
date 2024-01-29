@@ -1,0 +1,25 @@
+<html>
+    <body>
+        <table id="table" border="20"></table>
+    </body>
+<script>
+function generateTableBody(table, data) {
+    let tbody = table.createTBody();
+    data.forEach(element => {
+      let row = tbody.insertRow();
+      let values = Object.values(element);
+      values.forEach(value => {
+        let cell = row.insertCell();
+        let text = document.createTextNode(value);
+        cell.appendChild(text);
+      });
+    });
+  }
+  var t = document.getElementById("table");
+  var d = [['First Name','Last Name','Phone','Email'],
+            ['Steve','Carrell','827-283-2983','scarrell@fake.com'],
+            ['Jim','Maloney','372-282-8872','jmaloney@fake.com'],];
+  generateTableBody(t,d);
+</script>
+  </html>
+  
